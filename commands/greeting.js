@@ -4,14 +4,14 @@ module.exports = function greetings(msg, botId) {
   }
 
   if (msg.content.match(/^bom dia/gi)) {
-    msg.channel.send('Bom dia! 🌞');
+    msg.channel.send(`Bom dia, ${msg.author.username} 🌞!`);
   }
 
   if (msg.content.match(/^boa tarde/gi)) {
-    msg.channel.send('Boa tarde! 🌤');
+    msg.channel.send(`Boa tarde, ${msg.author.username} 🌥️!`);
   }
 
   if (msg.content.match(/^boa noite/gi)) {
-    msg.channel.send('Boa noite! 😴');
+    msg.channel.send(`Boa noite, ${msg.author.username} 🌜!`);
   }
 };

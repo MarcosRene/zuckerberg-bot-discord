@@ -6,11 +6,12 @@ const client = new Client();
 
 const greeting = require('./commands/greeting');
 const help = require('./commands/help');
+const github = require('./commands/github');
 const bot = require('./commands/bot');
+const roles = require('./commands/roles');
 const deleteMessages = require('./commands/delete');
 const channelMessages = require('./commands/channel');
-const roles = require('./commands/roles');
-const github = require('./commands/github');
+const poll = require('./commands/poll');
 
 client.on('guildMemberAdd', (member) => {
   const channel = member.guild.channels.cache.get(process.env.CHANNEL_ID);
@@ -38,6 +39,7 @@ client.on('message', (msg) => {
   roles(msg);
   channelMessages(msg);
   deleteMessages(msg);
+  poll(msg);
 });
 
 client.login(process.env.TOKEN_BOT);

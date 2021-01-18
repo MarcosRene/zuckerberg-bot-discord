@@ -11,9 +11,7 @@ module.exports = async function deleteMessage(msg) {
           msg.channel.send(`${message.size} mensagens foram deletadas. ✅`)
         );
     } else {
-      return msg.reply(
-        'Você não tem permissões para executar esse comando. 😓'
-      );
+      msg.reply('Você não tem permissões para executar esse comando. 😓');
     }
   }
 };
